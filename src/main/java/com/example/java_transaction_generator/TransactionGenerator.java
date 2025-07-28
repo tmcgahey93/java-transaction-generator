@@ -6,7 +6,7 @@ public class TransactionGenerator {
 
     public static Transaction generate() {
         Transaction txn = new Transaction();
-        txn.transactionId = UUID.randomUUID.toString();
+        txn.transactionId = UUID.randomUUID().toString();
         txn.userId = "user-" + ThreadLocalRandom.current().nextInt(1, 100);
         txn.amount = ThreadLocalRandom.current().nextDouble(1.0, 5000.0);
         txn.currency = "USD";
